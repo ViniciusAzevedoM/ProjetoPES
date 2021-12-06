@@ -1,28 +1,37 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../components/footer'
+import logoBranca from '../images/logoBranca.png'
+import positivePeopleFood from "../images/positivePeopleFood.png"
+import picole from '../images/picole.png'
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div>
-      <div name="Navbar" className="w-full h-20 bg-lifoo-200 flex justify-end">
+      <div name="Navbar" className="w-full h-14 px-16 bg-lifoo-200 flex justify-between">
+        <img className="h-10 self-center" src={logoBranca} alt="logo lifoo branca" />
+        <div className="flex">
         <button className="text-md text-white mr-10">Home</button>
         <button className="text-md text-white mr-10">Sobre</button>
         <button className="text-md text-white mr-10">Contato</button>
-        <button className="self-center w-40 h-9 bg-white rounded-2xl text-md mr-20">Cadastre seu perfil</button>
+        <button onClick={() => { navigate("/signup") }} className="self-center w-52 h-9 bg-white text-lifoo-100 rounded-2xl text-md pl-3"><img className="-mt-1 -mb-7 h-8" src={picole} alt="picolé mascote"></img><b>Cadastre seu perfil</b></button>
+        </div>
       </div>
-      <div name="MainDiv" className="w-full h-96 bg-white grid grid-cols-2">
-        <div className="-ml-56 place-self-center">
+      <div name="MainDiv" className="w-full py-16 bg-white grid grid-cols-2">
+        <div className="-ml-48 place-self-center">
           <p className="text-lifoo-100 text-5xl mb-10"><b>Ajude a reduzir<br /> a fome no<br /> mundo!</b></p>
           <button className="w-48 h-11 bg-lifoo-100 rounded-3xl text-white text-sm mr-20"><b>Quero ajudar!</b></button>
         </div>
-        <div className="w-100% h-full -ml-40 bg-black">
-          <p className="text-3xl text-white">Inserir foto</p>
+        <div className="">
+          <img className="-ml-10" src={positivePeopleFood} alt="Foto de pessoas reciclando comida"></img>
         </div>
       </div>
-      <div name="About" className="py-20 bg-gradient-to-r from-lifoo-100 to-lifoo-300 grid grid-cols-2">
+      <div name="About" className="py-28 bg-gradient-to-r from-lifoo-100 to-lifoo-300 grid grid-cols-2">
         <div className="place-self-center">
-          <p className="text-white text-5xl mb-10">
-            <b>O que é a <br />Lifoo?</b>
+          <p className="text-white mb-12">
+            <b className="text-4xl">O que é a</b><img className="h-11 mt-4 -mb-11" src={logoBranca} alt="logo lifoo branca"></img><b className="text-4xl ml-36">?</b>
           </p>
           <p className="text-white text-2xl">
             Lorem impsun, Lorem impsun, Lorem impsun,<br />
@@ -52,40 +61,40 @@ function Home() {
       </div>
       <div name="WhyLifoo" className="py-20 bg-gradient-to-r from-lifoo-100 to-lifoo-300 flex flex-col justify-center">
         <b className="text-white text-center text-5xl mb-28">
-          Por que entrar<br/> para a Lifoo?
+          Por que entrar<br /> para a Lifoo?
         </b>
         <div className="flex flex-row justify-evenly">
           <div className="flex flex-wrap border bg-lifoo-100 h-56 w-1/5 border-white rounded-full pt-6">
             <b className="text-7xl text-white opacity-20 ml-10">01</b>
-            <b className="text-white mt-2 text-2xl">Lorem<br/> impsum</b>
+            <b className="text-white mt-2 text-2xl">Lorem<br /> impsum</b>
             <p className="text-white mx-10 text-md">
               Lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum.
             </p>
           </div>
           <div className="flex flex-wrap border bg-lifoo-100 h-56 w-1/5 border-white rounded-full pt-6">
             <b className="text-7xl text-white opacity-20 ml-10">02</b>
-            <b className="text-white mt-2 text-2xl">Lorem<br/> impsum</b>
+            <b className="text-white mt-2 text-2xl">Lorem<br /> impsum</b>
             <p className="text-white mx-10 text-md">
               Lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum.
             </p>
           </div>
           <div className="flex flex-wrap border bg-lifoo-100 h-56 w-1/5 border-white rounded-full pt-6">
             <b className="text-7xl text-white opacity-20 ml-10">03</b>
-            <b className="text-white mt-2 text-2xl">Lorem<br/> impsum</b>
+            <b className="text-white mt-2 text-2xl">Lorem<br /> impsum</b>
             <p className="text-white mx-10 text-md">
               Lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum.
             </p>
           </div>
           <div className="flex flex-wrap border bg-lifoo-100 h-56 w-1/5 border-white rounded-full pt-6">
             <b className="text-7xl text-white opacity-20 ml-10">04</b>
-            <b className="text-white mt-2 text-2xl">Lorem<br/> impsum</b>
+            <b className="text-white mt-2 text-2xl">Lorem<br /> impsum</b>
             <p className="text-white mx-10 text-md">
               Lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum, lorem impsum.
             </p>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
