@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './index.css';
 import Home from './pages/Home';
-import SingUp from './pages/Signup';
+import SingUp from './pages/signup';
 import {UserStorage} from './userContext';
 //import {UserContext} from './userContext';
 
