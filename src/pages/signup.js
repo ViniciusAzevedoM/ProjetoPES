@@ -1,9 +1,10 @@
 import React from 'react';
+import Login from '../components/Login/Login'
 
 function SingUp() {
   return (
     <div>
-        <p>Tela de cadastro</p>
+        <Login />
     </div>
   );
 }

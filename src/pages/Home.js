@@ -5,7 +5,7 @@ import logoBranca from '../images/logoBranca.png'
 import positivePeopleFood from "../images/positivePeopleFood.png"
 import picole from '../images/picole.png'
 
-function Home() {
+const Home = () => {
   const navigate = useNavigate();
 
   return (

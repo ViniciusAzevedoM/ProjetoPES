@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './index.css';
 import Home from './pages/Home';
-import SingUp from './pages/signup';
+import SingUp from './pages/Signup';
+import {UserStorage} from './userContext';
+//import {UserContext} from './userContext';
 
 ReactDOM.render(
   <Router>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/signup" element={<SingUp />} />
-    </Routes>
+    <UserStorage>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SingUp />} />
+      </Routes>
+    </UserStorage>
   </Router>,
   document.getElementById('root')
 );
