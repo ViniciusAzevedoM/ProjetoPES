@@ -77,14 +77,14 @@ let listReceitas = [
 
 function searchName(name){
     return listAlimentos.filter((element)=>{
-        if(element.nome === name){
+        if(element.nome.toLowerCase() === name.toLowerCase()){
             return element;
         }
     });
 }
 function searchNameR(name){
     return listReceitas.filter((element)=>{
-        if(element.nome === name){
+        if(element.nome.toLowerCase() === name.toLowerCase()){
             return element;
         }
     });
