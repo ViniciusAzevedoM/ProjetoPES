@@ -7,6 +7,7 @@ module.exports = {
 
       black: '#000',
       white: '#fff',
+      gray: '#DCDCDC',
 
       lifoo: {
         100: '#25B4B0',
