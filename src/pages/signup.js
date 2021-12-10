@@ -12,7 +12,7 @@ function SingUp() {
           <form action="" className="w-full h-full flex flex-col items-start justify-center">
             <div className="flex flex-row justify-around items-center w-full">
               <span className="mb-4 border-b-2 border-white pb-2 text-white font-medium text-sm text-center mx-5" htmlFor="form">CADASTRO</span>
-              <a onClick={() => { navigate("/") }} className="mb-4 border-b-2 border-white pb-2 text-white font-medium text-sm text-center" htmlFor="form">HOME</a>
+              <button onClick={() => { navigate("/") }} className="mb-4 border-b-2 border-white pb-2 text-white font-medium text-sm text-center" htmlFor="form">HOME</button>
             </div>
             <div className="flex flex-col w-full">
               <input className="placeholder:text-white outline-none w-full h-12 mb-8 bg-transparent text-lg px-3 text-white border-b-2 border-white" type="text" placeholder="User Name" name="User name"/>
@@ -24,6 +24,9 @@ function SingUp() {
             </div>
             <div className="w-full flex items-center justify-center h-12">
               <button className="flex items-center justify-center bg-lifoo-200 h-full w-44 rounded-2xl text-white" type="submit">CADASTRAR</button>
+            </div>
+            <div className="absolute bottom-0 left-0 flex place-items-start">
+              <button className="flex justify-center bg-lifoo-200 h-full w-44 rounded-2xl text-white" onClick={() => { navigate("/userScreen") }}>User page</button>
             </div>
           </form>
         </fieldset>

@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRecycle, faHistory, faUser } from "@fortawesome/free-solid-svg-icons";
+import { listAlimentos, listReceitas, searchName, searchNameR } from '../services/FakeBackEnd';
 import logoVerde from '../images/logoVerde.png'
 
 function UserScreen() {
+    const navigate = useNavigate();
     // function myFunction() {
     //     // Declare variables
     //     var input, filter, ul, li, a, i, txtValue;
@@ -34,7 +37,7 @@ function UserScreen() {
                     <button className="mt-44 text-md text-lifoo-100"><FontAwesomeIcon className="mr-2" icon={faRecycle} /><b>Reutilizar</b></button>
                     <button className="mt-6 text-md text-lifoo-100"><FontAwesomeIcon className="mr-2" icon={faHistory} /><b>Histórico</b></button>
                     <button className="mt-6 text-md text-lifoo-100"><FontAwesomeIcon className="mr-2" icon={faUser} /><b>Perfil</b></button>
-                    <button className="mt-44 w-28 h-9 bg-lifoo-100 text-white rounded-2xl text-md"><b>Sair</b></button>
+                    <button onClick={() => { navigate("/") }} className="mt-44 w-28 h-9 bg-lifoo-100 text-white rounded-2xl text-md"><b>Sair</b></button>
                 </div>
                 <div className="ml-40 w-full h-screen bg-gray flex justify-center">
                     <div className="mt-10 w-1/2 h-96 rounded-lg bg-white">
@@ -42,7 +45,7 @@ function UserScreen() {
                         <b className="text-md text-black self-center">Olá, nome_usuario!</b>
                     </div>
                     <div className="flex flex-col place-items-center">
-                        <input type="text" id="searchFood" placeholder="Qual alimento quer reutilizar?" className="w-96 bg-white border"></input>
+                        <input type="text" id="searchFood" onKeyPress={(e) => searchName(e)} placeholder="Qual alimento quer reutilizar?" className="w-96 bg-white border"></input>
                         {/* <ul id="foods">
                             <li><a href="#">Adele</a></li>
                             <li><a href="#">Agnes</a></li>
