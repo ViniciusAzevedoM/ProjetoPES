@@ -4,6 +4,9 @@ import Footer from '../components/footer'
 import logoBranca from '../images/logoBranca.png'
 import positivePeopleFood from "../images/positivePeopleFood.png"
 import picole from '../images/picole.png'
+import { searchNameR } from '../services/FakeBackEnd';
+
+console.log(searchNameR("Salsicha"));
 
 const Home = () => {
   const navigate = useNavigate();
@@ -13,7 +16,7 @@ const Home = () => {
       <div name="Navbar" className="w-full h-14 px-16 bg-lifoo-200 flex justify-between">
         <img className="h-10 self-center" src={logoBranca} alt="logo lifoo branca" />
         <div className="flex">
-        <button className="text-md text-white mr-10">Home</button>
+        <button className="text-md text-white mr-10"><a href="#">Home</a></button>
         <button className="text-md text-white mr-10">Sobre</button>
         <button className="text-md text-white mr-10">Contato</button>
         <button onClick={() => { navigate("/signup") }} className="self-center w-44 h-9 bg-white text-lifoo-100 rounded-2xl text-md pl-3"><img className="-mt-1 -mb-7 h-8" src={picole} alt="picolé mascote"></img><b>Entre aqui!</b></button>
