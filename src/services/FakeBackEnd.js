@@ -77,7 +77,7 @@ let listReceitas = [
 
 function searchName(name){
     return listAlimentos.filter((element)=>{
-        if(element.nome.toLowerCase() === name.toLowerCase()){
+        if(element.nome === name){
             return element;
         }
     });
